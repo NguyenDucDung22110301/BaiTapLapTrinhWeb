@@ -15,7 +15,6 @@ import java.io.IOException;
 /**
  * Servlet implementation class changePassword
  */
-@WebServlet("/changePass")
 public class changePassword extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

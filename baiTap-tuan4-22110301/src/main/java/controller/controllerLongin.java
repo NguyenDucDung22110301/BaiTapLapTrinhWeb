@@ -18,7 +18,6 @@ import Util.Constant;
 /**
  * Servlet implementation class controllerLongin
  */
-@WebServlet("/Login")
 public class controllerLongin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     

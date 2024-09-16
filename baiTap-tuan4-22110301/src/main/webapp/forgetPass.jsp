@@ -194,7 +194,7 @@ body {
             <img src="https://unsplash.it/40/40?image=883" alt="Lock Icon" class="rounded-full">
             <h1 class="text-xl font-semibold">  Quên Mật Khẩu </h1> 
         </div>
-        <form id="forgetPassword" class="space-y-6" action = "changePass" method = "post">
+        <form id="forgetPassword" class="space-y-6" action = "forgetPassword" method = "post">
             <c:if test="${alert != null}">
 				    <h3 class="alert" style="text-align: justify; font-size: 12px;">
 				        ${alert}

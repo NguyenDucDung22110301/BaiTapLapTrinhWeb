@@ -12,7 +12,6 @@ import java.io.IOException;
 /**
  * Servlet implementation class logout
  */
-@WebServlet("/dangXuat")
 public class logout extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        

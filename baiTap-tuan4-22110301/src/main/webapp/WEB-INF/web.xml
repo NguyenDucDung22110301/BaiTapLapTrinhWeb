@@ -8,9 +8,9 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>controllerLongin</servlet-name>
-    <url-pattern>/controllerLongin</url-pattern>
+    <url-pattern>/Login</url-pattern>
   </servlet-mapping>
-  <display-name>baiTap2-tuan3-22110301</display-name>
+  <display-name>baiTap-tuan4-22110301</display-name>
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
@@ -27,7 +27,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>controllerRegister</servlet-name>
-    <url-pattern>/controllerRegister</url-pattern>
+    <url-pattern>/Register</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -37,7 +37,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>logout</servlet-name>
-    <url-pattern>/logout</url-pattern>
+    <url-pattern>/dangXuat</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -47,7 +47,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>changePassword</servlet-name>
-    <url-pattern>/changePassword</url-pattern>
+    <url-pattern>/changePass</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
