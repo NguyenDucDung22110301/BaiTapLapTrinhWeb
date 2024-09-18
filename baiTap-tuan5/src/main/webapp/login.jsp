@@ -85,7 +85,6 @@
     </style>
 </head>
 <body>
-<h1 class="titleTest">ád</h1>
     <div class="login-register-container">
         <form action="newRegister" method="post">
             <div class="row">
