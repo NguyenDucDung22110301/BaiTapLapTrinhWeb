@@ -18,6 +18,7 @@ import Util.Constant;
 /**
  * Servlet implementation class controllerLongin
  */
+@WebServlet (urlPatterns ={"/viewCustomer/login"})
 public class controllerLongin extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -32,6 +33,7 @@ public class controllerLongin extends HttpServlet {
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
+  
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if (session != null && session.getAttribute("account") != null) {

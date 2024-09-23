@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
-                                    
+                                            
     
     
     
@@ -7,8 +7,12 @@
     
     
     
-    <wb-module deploy-name="baitap-tuan4-22110301-1.0">
-                                                                        
+    
+    
+    <wb-module deploy-name="baiTap-tuan5-1.0">
+                                                                                        
+        
+        
         
         
         
@@ -17,7 +21,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -26,7 +32,9 @@
         
         
         <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -35,7 +43,9 @@
         
         
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
-                                                                        
+                                                                                        
+        
+        
         
         
         
@@ -44,13 +54,11 @@
         
         
         <property name="java-output-path" value="/baiTap2-22110301/build/classes"/>
-                                                
-        
-        
-        
-        
-        <property name="context-root" value="baitap-tuan4-22110301"/>
-                                                                    
+                
+        <property name="context-root" value="baiTap-tuan5"/>
+                                                                                    
+    
+    
     
     
     
@@ -59,7 +67,9 @@
     
     
     </wb-module>
-                                
+                                        
+
+
 
 
 
