@@ -37,7 +37,7 @@ public class controllerLongin extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession(false);
 		if (session != null && session.getAttribute("account") != null) {
-			response.sendRedirect(request.getContextPath()+ "/LonginSuccess.jsp");
+			response.sendRedirect(request.getContextPath()+ "/index.jsp");
 			return;
 		}else {
 			response.sendRedirect("login.jsp");
@@ -55,7 +55,6 @@ public class controllerLongin extends HttpServlet {
 		String password = request.getParameter("password");
 		boolean isRememberMe = false;	
 		String remember = request.getParameter("remember");
-
 		 if("on".equals(remember)){
 			 isRememberMe = true;
 		 }
@@ -63,7 +62,7 @@ public class controllerLongin extends HttpServlet {
 		 if(username.isEmpty() || password.isEmpty()){
 			 alertMsg = "Tài khoản hoặc mật khẩu không được rỗng";
 			 request.setAttribute("alert", alertMsg);
-			 request.getRequestDispatcher("/login.jsp").forward(request, response);
+			 request.getRequestDispatcher("/viewCustomer/login.jsp").forward(request, response);
 			 return;
 		 }
 		 UserService service = new UserServiceImpl();
@@ -75,11 +74,11 @@ public class controllerLongin extends HttpServlet {
 			  if(isRememberMe){
 				  saveRemeberMe(response, username);
 			  }
-			  response.sendRedirect(request.getContextPath() + "/LonginSuccess.jsp");
+			  response.sendRedirect(request.getContextPath() + "/index.jsp");
 		 }else{
 			  alertMsg = "Tài khoản hoặc mật khẩu không đúng";
 			  request.setAttribute("alert", alertMsg);
-			  request.getRequestDispatcher("/login.jsp").forward(request, response);
+			  request.getRequestDispatcher("viewCustomer/login.jsp").forward(request, response);
 			  }
 		}
 			private void saveRemeberMe(HttpServletResponse response, String username){

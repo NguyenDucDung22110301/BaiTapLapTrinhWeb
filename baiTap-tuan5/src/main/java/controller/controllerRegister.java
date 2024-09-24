@@ -19,6 +19,7 @@ import Util.Constant;
 /**
  * Servlet implementation class controllerRegister
  */
+@WebServlet (urlPatterns ={"/viewCustomer/Register"})
 public class controllerRegister extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -81,7 +82,7 @@ public class controllerRegister extends HttpServlet {
 				//SendMail sm = new SendMail();
 				//sm.sendMail(email, "Shopping.iotstar.vn", "Welcome to Shopping. Please Login to use service. Thanks !");
 					request.setAttribute("alert", alertMsg);
-					response.sendRedirect(request.getContextPath() + "/registerSuccess.jsp");
+					response.sendRedirect(request.getContextPath() + "viewCustomer/registerSuccess.jsp");
 				} else {
 					alertMsg = "System error!";
 					request.setAttribute("alert", alertMsg);

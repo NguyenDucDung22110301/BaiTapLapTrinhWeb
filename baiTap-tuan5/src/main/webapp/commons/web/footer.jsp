@@ -12,7 +12,7 @@
 
 					<div class="footer-item">
 						<div class="company-brand">
-							<img src="images/main-logo.png" alt="logo" class="footer-logo">
+							<img src="../images/main-logo.png" alt="logo">
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 								Sagittis sed ptibus liberolectus nonet psryroin. Ha sed lorem
 								posuere sit iaculis amet, ac urna. Adipiscing fames semper erat

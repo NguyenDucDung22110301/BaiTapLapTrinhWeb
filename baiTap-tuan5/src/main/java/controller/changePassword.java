@@ -15,6 +15,7 @@ import java.io.IOException;
 /**
  * Servlet implementation class changePassword
  */
+@WebServlet (urlPatterns ={"/viewCustomer/changePass"})
 public class changePassword extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -30,7 +31,11 @@ public class changePassword extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+		HttpSession session = request.getSession(false);
+		if (session != null && session.getAttribute("account") != null) {
+			response.sendRedirect(request.getContextPath()+ "/index.jsp");
+			return;
+		}
 	}
 
 	/**
@@ -54,31 +59,31 @@ public class changePassword extends HttpServlet {
 		if(user == null) {
 			alertMsg = "chưa tồn tại khách hàng";
 			request.setAttribute("alert", alertMsg);
-			request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+			request.getRequestDispatcher("/viewCustomer/ChangePass.jsp").forward(request, response);
 		}
 		if(password.equals(user.getPassWord())){
 			if(password.equals(repassword)) {
 				alertMsg = "Mật khẩu mới không được giống mật khẩu cũ";
 				request.setAttribute("alert", alertMsg);
-				request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+				request.getRequestDispatcher("/viewCustomer/ChangePass.jsp").forward(request, response);
 			}else {
 				if(repassword.equals(newrepassword)) {
 					System.out.println("thay doi mat khau thanh cong");
 					service.changePassword(username, repassword);
-					request.getRequestDispatcher("/successChangePass.jsp").forward(request, response);
+					request.getRequestDispatcher("/viewCustomer/successChangePass.jsp").forward(request, response);
 				}else {
 					alertMsg = "Mật khẩu nhập lại không khớp";
 					request.setAttribute("alert", alertMsg);
-					request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+					request.getRequestDispatcher("/viewCustomer/ChangePass.jsp").forward(request, response);
 				}
 			}
 			alertMsg = "Mật khẩu hiện tại không khớp với mật khẩu cũ";
 			request.setAttribute("alert", alertMsg);
-			request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+			request.getRequestDispatcher("/viewCustomer/ChangePass.jsp").forward(request, response);
 		}else {
 			alertMsg = "Mật khẩu hiện tại không khớp với mật khẩu cũ";
 			request.setAttribute("alert", alertMsg);
-			request.getRequestDispatcher("/ChangePass.jsp").forward(request, response);
+			request.getRequestDispatcher("/viewCustomer/ChangePass.jsp").forward(request, response);
 		}
 		
 	}

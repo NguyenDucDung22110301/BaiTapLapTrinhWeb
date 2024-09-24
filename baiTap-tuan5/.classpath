@@ -37,7 +37,7 @@
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/ecj-4.20.jar"/>
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/el-api.jar"/>
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jakartaee-migration-1.0.1-shaded.jar"/>
-	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jasper.jar"/>
+	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jasper.jar" sourcepath="C:/Users/1/.m2/repository/org/apache/tomcat/tomcat-jasper/10.0.23/tomcat-jasper-10.0.23-sources.jar"/>
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jasper-el.jar"/>
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jaspic-api.jar"/>
 	<classpathentry kind="lib" path="C:/tomcat/apache-tomcat-10.0.23/lib/jsp-api.jar"/>

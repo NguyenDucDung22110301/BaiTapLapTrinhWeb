@@ -16,16 +16,6 @@
 	crossorigin="anonymous">
 </script>
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .bg-gray-100 {
     background-color: #f4f4f4;
@@ -181,7 +171,6 @@ body {
 </style>
 </head>
 <body>
-	
 	<div class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="bg-white p-10 rounded-lg shadow-lg max-w-md w-full">
         <div class="flex items-center space-x-2 mb-6">
@@ -211,6 +200,7 @@ body {
                 <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none focus:ring focus:border-blue-300">Apply Changes</button>
             </div>
         </form>
+        <p align="center"> Quay lại trang chủ <a href="../index.jsp" style="color: #6756FA"> home </a></p>
     </div>
 </div>
 	

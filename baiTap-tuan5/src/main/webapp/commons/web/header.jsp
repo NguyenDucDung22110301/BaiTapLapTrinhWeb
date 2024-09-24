@@ -30,8 +30,7 @@
 					</div>
 					<div class="col-md-6">
 						<div class="right-element">
-							<a href="#" class="user-account for-buy"><i
-									class="icon icon-user"></i><span>Account</span></a>
+									<i class="icon icon-user"></i><span>Account</span>
 							<a href="#" class="cart for-buy"><i class="icon icon-clipboard"></i><span>Cart:(0
 									$)</span></a>
 							<div class="action-menu">

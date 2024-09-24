@@ -15,7 +15,7 @@ public class userDaoImpl implements DAOinterface{
 	
 	@Override
 	public User get(String username) {
-		String sql = "SELECT * FROM User WHERE username = ? ";
+		String sql = "SELECT * FROM user WHERE username = ? ";
 		try {
 			conn = new JDBCUtil().getConnection();
 			ps = conn.prepareStatement(sql);
@@ -40,7 +40,7 @@ public class userDaoImpl implements DAOinterface{
 
 	@Override
 	public void insert(User user) {
-		String sql = "INSERT INTO User(email, username, fullname, password, avatar, roleid,phone,createddate) VALUES (?,?,?,?,?,?,?,?)";
+		String sql = "INSERT INTO user(email, username, fullname, password, avatar, roleid,phone,createddate) VALUES (?,?,?,?,?,?,?,?)";
 				try {
 					conn = new JDBCUtil().getConnection();
 					ps = conn.prepareStatement(sql);
@@ -62,7 +62,7 @@ public class userDaoImpl implements DAOinterface{
 	@Override
 	public boolean checkExistEmail(String email) {
 			boolean duplicate = false;
-			String query = "select * from User where email = ?";
+			String query = "select * from user where email = ?";
 			try {
 			conn = new JDBCUtil().getConnection();
 			ps = conn.prepareStatement(query);
@@ -80,7 +80,7 @@ public class userDaoImpl implements DAOinterface{
 	@Override
 	public boolean checkExistUsername(String username) {
 		boolean duplicate = false;
-		String query = "select * from User where username = ?";
+		String query = "select * from user where username = ?";
 		try {
 			conn = new JDBCUtil().getConnection();
 			ps = conn.prepareStatement(query);
@@ -101,7 +101,7 @@ public class userDaoImpl implements DAOinterface{
 	}
 	@Override
 	public boolean updatePassword(String username, String newPassword) {
-        String sql = "UPDATE User SET password = ? WHERE username = ?";
+        String sql = "UPDATE user SET password = ? WHERE username = ?";
         try {
             conn = new JDBCUtil().getConnection();
             ps = conn.prepareStatement(sql);
@@ -121,4 +121,51 @@ public class userDaoImpl implements DAOinterface{
         }
         return false; 
     }
+
+	@Override
+	public boolean updateName(String username, String Fullname) {
+		String sql = "UPDATE user SET fullName = ? WHERE username = ?";
+        try {
+            conn = new JDBCUtil().getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Fullname);
+            ps.setString(2, username);    
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ps != null) ps.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+		
+	}
+
+	@Override
+	public boolean updatePhone(String username, String Phone) {
+		String sql = "UPDATE user SET phone = ? WHERE username = ?";
+        try {
+            conn = new JDBCUtil().getConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, Phone);
+            ps.setString(2, username);    
+            int rowsAffected = ps.executeUpdate();
+            return rowsAffected > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ps != null) ps.close();
+                if (conn != null) conn.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+        return false;
+	}
 }

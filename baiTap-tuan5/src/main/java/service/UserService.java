@@ -13,4 +13,6 @@ public interface UserService {
 	boolean checkExistPhone(String phone);
 	void changePassword(String username, String password);
 	boolean compUser(String s1, String s2);
+	void changeName(String username, String name);
+	void changePhone(String username, String phone);
 }

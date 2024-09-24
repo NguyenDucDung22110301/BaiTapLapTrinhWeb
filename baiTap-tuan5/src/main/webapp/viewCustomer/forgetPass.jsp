@@ -16,16 +16,6 @@
 	crossorigin="anonymous">
 </script>
 <style>
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
 
 .bg-gray-100 {
     background-color: #f4f4f4;
@@ -177,14 +167,8 @@ body {
 .rounded-md {
     border-radius: 0.375rem;
 }
-.login-register-container {
-            width: 350px;
-            background-color: blue;
-            color : white;
-            padding: 18px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-        }
+
+
 </style>
 </head>
 <body>
@@ -219,6 +203,7 @@ body {
             <div class="form-group">
                     <button type="submit" class="btn login-register-container"> Change Password</button>
               </div>
+               <p align="center"> Bạn muốn đăng nhập <a href="login.jsp" style="color: #6756FA">Đăng Nhập</a></p>
         </form>
     </div>
 </div>

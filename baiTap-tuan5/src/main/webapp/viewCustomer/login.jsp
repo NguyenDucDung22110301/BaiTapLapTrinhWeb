@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 
-<decorator:body>
      <form action="login" method="post">
             <div class="row">
                 <p class="myDivP">Đăng Nhập Vào Hệ Thống</p>
@@ -35,4 +34,3 @@
         <div>
             <p align="center">Nếu bạn chưa có tài khoản trên hệ thống, thì hãy <a href="register.jsp" style="color: #6756FA">Đăng ký</a></p>
         </div>
-</decorator:body>

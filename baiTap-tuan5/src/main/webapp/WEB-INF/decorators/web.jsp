@@ -105,16 +105,16 @@ pageEncoding="UTF-8"%>
 	
 </head>
 <body>
- <div id="container">
-	<div>
-		<%@ include file="/commons/web/header.jsp"%>
-	</div>
-	<div>
-		<sitemesh:write property="body"/>
-	</div>
-	<div>
-		<%@ include file="/commons/web/footer.jsp"%>
-	</div>
-	</div>
+	 <div id="container">
+		<div>
+			<%@ include file="/commons/web/header.jsp"%>
+		</div>
+		<div>
+			<sitemesh:write property="body"/>
+		</div>
+		<div>
+			<%@ include file="/commons/web/footer.jsp"%>
+		</div>
+		</div>
 </body>
 </html>

@@ -49,21 +49,21 @@ public class forgetPassword extends HttpServlet {
 			if(!us.compUser(user.getEmail(), email)) {
 				alertMsg = " email không đúng với email đã đăng kí! ";
 				request.setAttribute("alert", alertMsg);
-				request.getRequestDispatcher("/forgetPass.jsp").forward(request, response);
+				request.getRequestDispatcher("viewCustomer/forgetPass.jsp").forward(request, response);
 			}else if(!us.compUser(password, repassword)) {
 				alertMsg = " mật khẩu nhập lại không đúng ";
 				request.setAttribute("alert", alertMsg);
-				request.getRequestDispatcher("/forgetPass.jsp").forward(request, response);
+				request.getRequestDispatcher("viewCustomer/forgetPass.jsp").forward(request, response);
 			}else {
 				us.changePassword(username, password);
 				alertMsg = " đổi mật khẩu thành công, vui lòng quay lại đăng nhập ";
 				request.setAttribute("alert", alertMsg);
-				request.getRequestDispatcher("/forgetPass.jsp").forward(request, response);
+				request.getRequestDispatcher("viewCustomer/forgetPass.jsp").forward(request, response);
 			}
 		}else {
 			alertMsg = "chưa tồn tại khách hàng";
 			request.setAttribute("alert", alertMsg);
-			request.getRequestDispatcher("/forgetPass.jsp").forward(request, response);
+			request.getRequestDispatcher("/viewCustomer/forgetPass.jsp").forward(request, response);
 		}
 		
 	}

@@ -7,6 +7,6 @@
 <title> đã thay đổi mật khẩu thành công</title>
 </head>
 <body>
-	<p> thay doi mat khau thanh cong  <a href = "LonginSuccess.jsp"> nhan vao day </a> de chuyen ve trang chu</p>
+	<p> thay doi mat khau thanh cong  <a href="../index.jsp" style="color: #6756FA"> home </a> de chuyen ve trang chu</p>
 </body>
 </html>

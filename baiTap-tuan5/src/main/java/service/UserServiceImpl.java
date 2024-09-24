@@ -63,6 +63,16 @@ public class UserServiceImpl implements UserService {
 		return false;
 	}
 
+	@Override
+	public void changeName(String username, String name) {
+		userDao.updateName(username, name);
+	}
+
+	@Override
+	public void changePhone(String username, String phone) {
+		userDao.updatePhone(username, phone);
+	}
+
 	
 	
 }
