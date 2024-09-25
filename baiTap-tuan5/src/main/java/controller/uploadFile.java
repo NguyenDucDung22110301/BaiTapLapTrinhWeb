@@ -63,7 +63,7 @@ public class uploadFile extends HttpServlet {
 			 part.write(uploadPath + File.separator + fileName);
 		 }
 			 request.setAttribute("message", "File " + fileName + " has uploaded successfully!");
-			 getServletContext().getRequestDispatcher("viewCustomer/updateAvartar.jsp").forward(request, response);
+			 getServletContext().getRequestDispatcher("/viewCustomer/updateAvatar.jsp").forward(request, response);
 		 } catch (FileNotFoundException fne) {
 			 request.setAttribute("message", "There was an error: " + fne.getMessage());
 		 }

@@ -146,6 +146,8 @@ User us = (User) session.getAttribute("account");
 									<ul class="dropdown-menu">
 										<li><a class="dropdown-item" href="viewCustomer/ChangePass.jsp"> Đổi Mật Khẩu </a></li>
 										<li><a class="dropdown-item" href="viewCustomer/informationCustommer.jsp">  Cập nhật Tài Khoản</a></li>
+										<li><a class="dropdown-item" href="viewCustomer/profile.jsp">  Profile </a></li>
+										<li><a class="dropdown-item" href="viewCustomer/updateAvatar.jsp">  Upload </a></li>
 										<li><a class="dropdown-item" href="logout">log out</a></li>
 									</ul>
 									<%
